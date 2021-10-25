@@ -1,14 +1,10 @@
 import React from 'react';
-import {View, Text, SafeAreaView} from 'react-native';
-import Icon from 'react-native-vector-icons/Entypo';
+import Navigation from './src/navigation';
+import {ConversionContextProvider} from './src/utils/context';
 
-const App = () => {
-  return (
-    <SafeAreaView>
-      <Text>Meow</Text>
-      <Icon name="baidu" size={40} color="red" />
-    </SafeAreaView>
-  );
-};
-
+const App = () => (
+  <ConversionContextProvider>
+    <Navigation />
+  </ConversionContextProvider>
+);
 export default App;
